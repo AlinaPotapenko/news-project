@@ -1,0 +1,6 @@
+<app-header></app-header>
+<form [formGroup] = "searchForm" (submit)="submitAForm()">
+    <input formControlName = "q" type="text" pInputText placeholder="Keyword">
+    <button pButton (click) = "submitAForm()"  type="button" label="Search"></button>
+</form>
+<app-hot-news></app-hot-news>
