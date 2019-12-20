@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './http.service';
 import { UiComponentsModule } from './ui-components.module';
 import { HeaderComponent } from '../header/header.component';
+import { LengthLimitPipe } from '../length-limit.pipe';
 
 
 
@@ -21,7 +22,7 @@ import { HeaderComponent } from '../header/header.component';
     // Router
     RouterModule
   ],
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, LengthLimitPipe],
   providers: [
     HttpService
   ],
@@ -32,7 +33,8 @@ import { HeaderComponent } from '../header/header.component';
     RouterModule,
     HttpClientModule,
     UiComponentsModule,
-    HeaderComponent
+    HeaderComponent,
+    LengthLimitPipe
   ]
 })
 export class SharedModule { }

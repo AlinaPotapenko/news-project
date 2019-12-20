@@ -1,6 +1,6 @@
 <app-header></app-header>
-<form [formGroup] = "searchForm" (submit)="submitAForm()">
-    <input formControlName = "q" type="text" pInputText placeholder="Keyword">
+<form [formGroup] = "searchForm" (submit)="submitAForm()" class="searchForm">
+    <input formControlName = "q" type="text" #inputRef pInputText placeholder="Start looking" class="input">
     <button pButton (click) = "submitAForm()"  type="button" label="Search"></button>
 </form>
-<app-hot-news></app-hot-news>
+<app-hot-news *ngIf='newsList == ""'></app-hot-news>

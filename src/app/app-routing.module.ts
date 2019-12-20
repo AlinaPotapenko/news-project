@@ -10,6 +10,10 @@ const APP_ROUTING: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home-page/home-page.module').then(m => m.HomePageModule)
+  },
+  {
+    path: 'article',
+    loadChildren: () => import('./article-page/article-page.module').then(m => m.ArticlePageModule)
   }
 ];
 const rootRouting: ModuleWithProviders = RouterModule.forRoot(APP_ROUTING);

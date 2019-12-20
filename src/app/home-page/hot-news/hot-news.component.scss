@@ -1,0 +1,48 @@
+.header {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Baskervville', serif;
+    color: #313131;
+    font-size: 1.4em;
+    margin-bottom: 50px;
+}
+.article {
+    background-color: white;
+    border-radius: 5px;
+    height: 300px;
+    width: 260px;
+    padding: 10px;
+    background:rgba(255,255,255,0.8);
+    cursor: pointer;
+    padding: 15px;
+}
+:host ::ng-deep.ui-carousel-content {
+    width: 1270px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.title {
+   font-size: 1.7em;
+   margin-top: 0;
+   font-family: 'Courgette', cursive;
+   color: #4b4b4b;
+   text-align: right;
+}
+.author, .date {
+    text-align: right;
+    font-family: 'Courgette', cursive;
+    color: #4b4b4b;
+}
+:host ::ng-deep.ui-carousel .ui-carousel-dots-container .ui-carousel-dot-item.ui-state-highlight .ui-carousel-dot-icon{
+    background-color: #09e3c6;
+}
+:host ::ng-deep.ui-carousel .ui-carousel-dots-container .ui-carousel-dot-item .ui-carousel-dot-icon {
+    background-color: #f2fcfb;
+}
+:host ::ng-deep.ui-carousel-items-content {
+    display: inline-block;
+    padding-left: 11px;
+}
+:host ::ng-deep.ui-carousel-item {
+    display: flex;
+}

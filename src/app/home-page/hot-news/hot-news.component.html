@@ -1,5 +1,12 @@
-<!-- <carousel [value]="cars">
-    <ng-template let-car pTemplate="item">
-        Content to display
+<p-carousel *ngIf='hotNewsList.length' [value]="hotNewsList" [numVisible]="4" [numScroll]="1" [autoplayInterval]="3000">
+    <p-header>
+        <h3 class ='header'>Breaking News</h3>
+    </p-header>
+    <ng-template let-article pTemplate="item" >
+                <div class="article" (click)='navigateToArticle()'>
+                    <p class='title'>{{article.title}}</p>
+                    <p class= 'author' *ngIf='article.author'>{{article.author | lengthLimitPipe}}</p>
+                    <p class= 'date'>{{article.publishedAt | date}}</p>
+                </div>
     </ng-template>
-</carousel> -->
+</p-carousel>

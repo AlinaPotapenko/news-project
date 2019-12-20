@@ -1,0 +1,21 @@
+.searchForm {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 35px;
+}
+.input {
+    width: 300px;
+    height: 30px;
+    border-radius: 2px;
+    padding-left: 5px;
+}
+:host ::ng-deep.ui-button, :host ::ng-deep.ui-button:enabled:hover {
+    background-color: #09e3c6;
+    border: #09e3c6;
+    height: 28px;
+    transform: translateY(2px);
+}
+:host ::ng-deep.ui-button-text {
+    transform: translateY(-2px);
+}
