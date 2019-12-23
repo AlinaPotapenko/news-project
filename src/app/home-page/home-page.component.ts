@@ -51,8 +51,5 @@ export class HomePageComponent implements OnInit {
   }
   }
 
-  navigateToArticle() {
-    this._router.navigate(['article']).then();
-  }
 
 } 

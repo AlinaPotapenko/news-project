@@ -1,3 +1,4 @@
+ 
 .header {
     text-align: center;
     margin-top: 50px;
@@ -25,7 +26,6 @@
    font-size: 1.7em;
    margin-top: 0;
    font-family: 'Courgette', cursive;
-   color: #4b4b4b;
    text-align: right;
 }
 .author, .date {
@@ -34,10 +34,10 @@
     color: #4b4b4b;
 }
 :host ::ng-deep.ui-carousel .ui-carousel-dots-container .ui-carousel-dot-item.ui-state-highlight .ui-carousel-dot-icon{
-    background-color: #09e3c6;
+    background-color: #ba2541;
 }
 :host ::ng-deep.ui-carousel .ui-carousel-dots-container .ui-carousel-dot-item .ui-carousel-dot-icon {
-    background-color: #f2fcfb;
+    background-color: #f5eeef;
 }
 :host ::ng-deep.ui-carousel-items-content {
     display: inline-block;
