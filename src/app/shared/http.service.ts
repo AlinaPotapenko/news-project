@@ -35,7 +35,8 @@ export class HttpService {
   }
 
   public getHotNews<T>(params?: any): Observable<any> {
-    return this.http.get<T>(API_HOTNEWS_URL);
+    const getParams = { params: params };
+    return this.http.get<T>(API_HOTNEWS_URL, getParams);
   }
 
   public post<T>(data: any, queryParams?: any): Observable<any> {

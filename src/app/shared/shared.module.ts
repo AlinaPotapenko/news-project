@@ -7,6 +7,8 @@ import { HttpService } from './http.service';
 import { UiComponentsModule } from './ui-components.module';
 import { HeaderComponent } from '../header/header.component';
 import { LengthLimitPipe } from '../length-limit.pipe';
+import { LeftSideBarComponent } from '../left-side-bar/left-side-bar.component';
+import { RightSideBarComponent } from '../right-side-bar/right-side-bar.component';
 
 
 
@@ -22,7 +24,7 @@ import { LengthLimitPipe } from '../length-limit.pipe';
     // Router
     RouterModule
   ],
-  declarations: [HeaderComponent, LengthLimitPipe],
+  declarations: [HeaderComponent, LengthLimitPipe, LeftSideBarComponent, RightSideBarComponent],
   providers: [
     HttpService
   ],
@@ -34,7 +36,9 @@ import { LengthLimitPipe } from '../length-limit.pipe';
     HttpClientModule,
     UiComponentsModule,
     HeaderComponent,
-    LengthLimitPipe
+    LengthLimitPipe,
+    LeftSideBarComponent,
+    RightSideBarComponent
   ]
 })
 export class SharedModule { }

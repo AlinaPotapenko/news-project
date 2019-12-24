@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
@@ -14,11 +15,13 @@ import { CarouselModule } from 'primeng/carousel';
     ButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    CarouselModule
+    CarouselModule,
+    NgxChartsModule
   ],
   exports: [
     ButtonModule,
-    CarouselModule
+    CarouselModule,
+    NgxChartsModule
   ]
 })
 export class UiComponentsModule { }

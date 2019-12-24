@@ -1,20 +1,17 @@
- 
-.header {
+ .header {
     text-align: center;
     margin-top: 50px;
     font-family: 'Baskervville', serif;
-    color: #313131;
-    font-size: 1.4em;
+    color: #575354;
     margin-bottom: 50px;
 }
 .article {
-    background-color: white;
+    cursor: pointer;
     border-radius: 5px;
-    height: 300px;
+    height: 330px;
     width: 260px;
     padding: 10px;
     background:rgba(255,255,255,0.8);
-    cursor: pointer;
     padding: 15px;
 }
 :host ::ng-deep.ui-carousel-content {

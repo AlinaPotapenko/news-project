@@ -2,9 +2,9 @@
     <p-header>
         <h2 class ='header'>Breaking News</h2>
     </p-header>
-    <ng-template let-article pTemplate="item">
-                <div class="article" (click)='navigateToArticle()'>
-                    <p class='title' #titleRef [ngStyle]="{'color': black}">{{article.title}}</p>
+    <ng-template let-article pTemplate="item" >
+                <div class="article" (click)='navigateToArticle(article)'>
+                    <p class='title' #titleRef [ngStyle]="{'color': article.color}">{{article.title}}</p>
                     <p class= 'author' *ngIf='article.author'>{{article.author | lengthLimitPipe}}</p>
                     <p class= 'date'>{{article.publishedAt | date}}</p>
                 </div>
