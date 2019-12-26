@@ -1,7 +1,18 @@
-div {
+.general {
     background-color: white;
     width: 250px;;
     height: 1000px;
     float: left;
     margin-right: 50px;
+}
+.container {
+   display: table-cell;
+   color: white;
+   background-color: black;
+}
+
+
+
+.container div {
+    margin: 2px;
 }

@@ -7,6 +7,7 @@ describe('HotNewsComponent', () => {
   let fixture: ComponentFixture<HotNewsComponent>;
 
   beforeEach(async(() => {
+    /* ToDo remove it*/
     TestBed.configureTestingModule({
       declarations: [ HotNewsComponent ]
     })

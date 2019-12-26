@@ -17,6 +17,7 @@ const ROUTES: Routes = [
     CommonModule,
     RouterModule.forChild(ROUTES),
     SharedModule
-  ]
+  ],
+  providers: []
 })
 export class ArticlePageModule { }

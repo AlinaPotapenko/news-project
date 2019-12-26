@@ -9,8 +9,8 @@ import { HeaderComponent } from '../header/header.component';
 import { LengthLimitPipe } from '../length-limit.pipe';
 import { LeftSideBarComponent } from '../left-side-bar/left-side-bar.component';
 import { RightSideBarComponent } from '../right-side-bar/right-side-bar.component';
-
-
+import { DragulaModule, DragulaService } from 'ng2-dragula';
+import { HotArticleService } from '../home-page/hot-news/hot-news.component';
 
 
 @NgModule({
@@ -22,11 +22,14 @@ import { RightSideBarComponent } from '../right-side-bar/right-side-bar.componen
     // Http
     HttpClientModule,
     // Router
-    RouterModule
+    RouterModule,
+    DragulaModule.forRoot()
   ],
   declarations: [HeaderComponent, LengthLimitPipe, LeftSideBarComponent, RightSideBarComponent],
   providers: [
-    HttpService
+    HttpService,
+    DragulaService,
+    HotArticleService
   ],
   exports: [
     CommonModule,
@@ -38,7 +41,8 @@ import { RightSideBarComponent } from '../right-side-bar/right-side-bar.componen
     HeaderComponent,
     LengthLimitPipe,
     LeftSideBarComponent,
-    RightSideBarComponent
+    RightSideBarComponent,
+    DragulaModule
   ]
 })
 export class SharedModule { }

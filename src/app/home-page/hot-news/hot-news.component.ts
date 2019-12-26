@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { HttpService } from 'src/app/shared/http.service';
 import { Router, NavigationExtras } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-hot-news',
@@ -15,8 +16,9 @@ export class HotNewsComponent implements OnInit {
     pageSize: 15
   }
 
+
   constructor(private _httpService: HttpService, private _router: Router,
-    private _element: ElementRef) { }
+    private _hotArticleService: HotArticleService) { }
 
   ngOnInit() {
 
@@ -33,6 +35,7 @@ export class HotNewsComponent implements OnInit {
     }
   
   navigateToArticle(article) {
+    this._hotArticleService.sendMessage(article);
     let navigationExtras: NavigationExtras = {
       queryParams: article
     }
@@ -64,4 +67,15 @@ export class HotNewsComponent implements OnInit {
   }
 }
 
+export class HotArticleService {
+  private hotArticleMessage = new BehaviorSubject<any>('')
+
+  sendMessage(msg) {
+    this.hotArticleMessage.next({text: msg});
+  } 
+
+  getMessage() {
+    return this.hotArticleMessage.asObservable();
+  }
+} 
 
