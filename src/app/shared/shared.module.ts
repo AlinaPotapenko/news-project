@@ -10,7 +10,6 @@ import { HeaderComponent } from '../header/header.component';
 import { LengthLimitPipe } from './pipes/length-limit.pipe';
 import { LeftSideBarComponent } from '../left-side-bar/left-side-bar.component';
 import { RightSideBarComponent } from '../right-side-bar/right-side-bar.component';
-import { DragulaModule, DragulaService } from 'ng2-dragula';
 import { LengthLimitForContentPipe } from './pipes/length-limit-for-content.pipe';
 
 
@@ -24,7 +23,7 @@ import { LengthLimitForContentPipe } from './pipes/length-limit-for-content.pipe
     HttpClientModule,
     // Router
     RouterModule,
-    DragulaModule.forRoot()
+    UiComponentsModule
   ],
   declarations: [
     HeaderComponent, 
@@ -35,7 +34,6 @@ import { LengthLimitForContentPipe } from './pipes/length-limit-for-content.pipe
   ],
   providers: [
     HttpService,
-    DragulaService,
   ],
   exports: [
     CommonModule,
@@ -49,7 +47,6 @@ import { LengthLimitForContentPipe } from './pipes/length-limit-for-content.pipe
     LengthLimitForContentPipe,
     LeftSideBarComponent,
     RightSideBarComponent,
-    DragulaModule
   ]
 })
 export class SharedModule { }
