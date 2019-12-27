@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
 import { DragulaService } from 'ng2-dragula';
 @Component({
   selector: 'app-left-side-bar',
   templateUrl: './left-side-bar.component.html',
   styleUrls: ['./left-side-bar.component.scss']
 })
-export class LeftSideBarComponent implements OnInit {
+export class LeftSideBarComponent {
 
   constructor(private dragulaService: DragulaService) { 
     this.dragulaService.createGroup("COLUMNS", {
@@ -25,7 +26,5 @@ export class LeftSideBarComponent implements OnInit {
     }
   ];
 
-  ngOnInit() {
-  }
 
 }

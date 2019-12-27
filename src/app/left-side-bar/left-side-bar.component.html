@@ -1,5 +1,8 @@
 <div class = "general">
-<div class="wrapper" dragula="COLUMNS" [(dragulaModel)]="groups">
+
+
+
+ <div class="wrapper" dragula="COLUMNS" [(dragulaModel)]="groups"> 
     <div class="container" *ngFor="let group of groups">
         <span class="group-handle">{{group.name}}</span>
         <div class="container" dragula="ITEMS" [(dragulaModel)]="group.items">
@@ -7,4 +10,8 @@
         </div>
     </div>
 </div>
+
+<div class="box"></div>
 </div>
+
+

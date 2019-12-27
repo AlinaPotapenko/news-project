@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+
 import { HttpService } from './http.service';
 import { UiComponentsModule } from './ui-components.module';
 import { HeaderComponent } from '../header/header.component';
-import { LengthLimitPipe } from '../length-limit.pipe';
+import { LengthLimitPipe } from './pipes/length-limit.pipe';
 import { LeftSideBarComponent } from '../left-side-bar/left-side-bar.component';
 import { RightSideBarComponent } from '../right-side-bar/right-side-bar.component';
 import { DragulaModule, DragulaService } from 'ng2-dragula';
-import { HotArticleService } from '../home-page/hot-news/hot-news.component';
+import { LengthLimitForContentPipe } from './pipes/length-limit-for-content.pipe';
 
 
 @NgModule({
@@ -25,11 +26,16 @@ import { HotArticleService } from '../home-page/hot-news/hot-news.component';
     RouterModule,
     DragulaModule.forRoot()
   ],
-  declarations: [HeaderComponent, LengthLimitPipe, LeftSideBarComponent, RightSideBarComponent],
+  declarations: [
+    HeaderComponent, 
+    LengthLimitPipe, 
+    LeftSideBarComponent, 
+    RightSideBarComponent,
+    LengthLimitForContentPipe
+  ],
   providers: [
     HttpService,
     DragulaService,
-    HotArticleService
   ],
   exports: [
     CommonModule,
@@ -40,6 +46,7 @@ import { HotArticleService } from '../home-page/hot-news/hot-news.component';
     UiComponentsModule,
     HeaderComponent,
     LengthLimitPipe,
+    LengthLimitForContentPipe,
     LeftSideBarComponent,
     RightSideBarComponent,
     DragulaModule

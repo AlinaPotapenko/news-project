@@ -1,10 +1,13 @@
-
 <app-header></app-header>
 <app-left-side-bar></app-left-side-bar>
 <app-right-side-bar></app-right-side-bar>
 <div class = "container">
   <h2>{{article.title}}</h2>
-    <p>{{article.description}}</p>
+    <p class="description">{{article.description}}</p>
+    <img src='{{article.urlToImage}}'class="image"/>
+    <p class="content">{{article.content | lengthLimitForContent}}<a href='{{article.url}}' target="_blank"> here.</a></p>
+    <p class='author'>by {{article.author}}</p>
+    <p class="date">Published: {{article.publishedAt | date}}</p>
 </div>
 
 

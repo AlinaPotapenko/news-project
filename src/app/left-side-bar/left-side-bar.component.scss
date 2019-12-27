@@ -5,14 +5,34 @@
     float: left;
     margin-right: 50px;
 }
+.wrapper {
+   display: table;
+}
+.container:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 .container {
-   display: table-cell;
-   color: white;
-   background-color: black;
+    display: table-cell;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.container div, .gu-mirror:not(.container) {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 0.4s ease-in-out;
 }
 
-
-
-.container div {
-    margin: 2px;
+.box {
+    margin-top: 50px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 195, 255);
+    transition: width 3s, height 3s, background-color 3s, transform 3s;
+}
+.box:hover {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(227, 252, 0);
+    transform: rotate(180deg);
 }

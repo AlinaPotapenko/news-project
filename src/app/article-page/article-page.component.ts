@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+
 import { single } from '../data-for-pie-chart';
-import { ActivatedRoute } from '@angular/router';
-import { HotArticleService } from '../home-page/hot-news/hot-news.component';
+import { SendArticleDataService } from '../shared/send-article-data.service';
 
 
 @Component({
@@ -10,8 +11,8 @@ import { HotArticleService } from '../home-page/hot-news/hot-news.component';
   styleUrls: ['./article-page.component.scss']
 })
 export class ArticlePageComponent implements OnInit{
-  article;
-  article2: any[];
+  article: any[] = [];
+  subscription: Subscription
   // single: any[];
   // gradient: boolean = true;
   // showLegend: boolean = true;
@@ -22,18 +23,30 @@ export class ArticlePageComponent implements OnInit{
   //   domain: ['FFF', 'blue', 'yellow', 'pink']
   // };
 
-  constructor(private _route: ActivatedRoute, private _hotArticleService: HotArticleService) {
+  constructor(private _sendArticleDataService: SendArticleDataService) {
     // Object.assign(this, { single });
-    this._route.queryParams.subscribe(params => {
-      this.article=params
-      console.log(this.article)
-    })
   } 
 
   ngOnInit() {
-    this._hotArticleService.getMessage().subscribe(data => this.article2 = data);
-    console.log(this.article2)
-  }
+    this.subscription = this._sendArticleDataService.getMessage().subscribe(data => {
+      if (data) {
+            localStorage.clear();
+            localStorage.setItem("article", JSON.stringify(data));
+            this.article = data;
+            console.log(this.article);
+        } else if (!data) {
+          this.article = JSON.parse(localStorage.getItem("article"));
+          console.log(this.article)
+      }})
+    }
+
+    ngOnDestroy() {
+      this.subscription.unsubscribe();
+    }
+  
+    
+    
+  
 
   // onSelect(data): void {
   //   console.log('Item clicked', JSON.parse(JSON.stringify(data)));

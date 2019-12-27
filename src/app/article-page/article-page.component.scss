@@ -1,11 +1,35 @@
 .container {
     padding: 10px;
     box-sizing: border-box;
-    color: #7a7778;
 }
 h2 {
     color: #575354;
     font-family: 'Baskervville', serif;
+    margin-top: 50px;
 }
-
+.description {
+    color: #7a7778;
+    font-style: italic;
+}
+.content {
+    color: #575354;
+    margin-top: 50px;
+}
+img.image {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 3px;
+    box-shadow: 5px -5px 5px rgb(158, 157, 157);
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+}
+.date, .author {
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #575354;
+    font-style: italic;
+}
 

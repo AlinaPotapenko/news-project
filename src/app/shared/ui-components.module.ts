@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { DragulaModule, DragulaService } from 'ng2-dragula';
 
 
 
@@ -16,12 +17,15 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     FormsModule,
     ReactiveFormsModule,
     CarouselModule,
-    NgxChartsModule
+    NgxChartsModule,
+    DragulaModule.forRoot()
   ],
+  providers: [ DragulaService ],
   exports: [
     ButtonModule,
     CarouselModule,
-    NgxChartsModule
+    NgxChartsModule,
+    DragulaModule
   ]
 })
 export class UiComponentsModule { }
